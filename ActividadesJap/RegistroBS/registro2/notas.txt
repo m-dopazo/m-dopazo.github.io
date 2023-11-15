@@ -1,0 +1,88 @@
+Bootstrap 5
+
+
+// Crear Formularios
+Dentro de un <form>
+
+General:
+    inputs -> .form-control
+    labels -> .form-label for="idinput"
+
+Checkboxes:
+    div contenedor -> .form-check
+    inputs -> .form-check-input
+    labels -> .form-check-label
+
+TextArea:
+    <textarea> con .form-control
+
+Atributos: Disabled && Readonly
+
+Otras clases:
+    .form-control-plaintext //para no mostrar bordes si nada, solo padding y margen invisibles
+    <input type="color" class="form-control form-control-color" value="#CCCCCC"> // Es un input de colores.
+
+//Menu SELECT
+<select class="form-select">
+    <option>a</option>
+    <option>b</option>
+    <option>c</option>
+
+Pueden estar DISABLED y pueden variar de tamaño si se le añade -lg o -sm
+
+//Checkboxes y radios
+en un <div class="form-check">
+tener <input class="form-check-input" type="checkbox" value="Output1" checked>
+añade un checkbox que se llamara Opcion 1  que tiene un value de Output1 y aparece chekeado por default.
+    -Se le suele añadir un label con clase form-check-label que lo identifique
+    -Pueden estar disabled
+    -En vez de un label se peude escribir directamente en el innerhtml el label.
+IDEM con radios
+
+//Switch
+Iwal a checkbox:
+dentro de un div .form-check se añade un input type checkbox con clase .form-switch
+
+//INPUT GROUP
+Clase que se le aplica a un div para colocar cierto formato a un input en una linea.
+
+    clase div contenedor: .input-group
+    clase a los elementos que aparecen appended: .input-group-text
+
+//FLOATING LABELS
+Labels que aparecen dentro del input
+    Tiene que haber un contenedor de tanto el input como el label, con clase .form-floating
+    -El label debe ir DESPUES que el input
+    -El label DEBE tener un PLACERHOLDER aunque no se muestre.
+
+Funciona tambien para TExTAREAS y SELECT MENUS
+
+//FORM-VALIDATION
+
+al elemento FORM se le puede añadir las clases .needs-validation (todavia no se valida, no se muestra correcto o errores) o .was-validated (se esta validando, se considera si los inputs coinciden o no.).
+-Por defecto, los inputs tendran bordes rojos o verdes
+-Se puede añadir dentro de un div que contenga al input y label OTROs divs, de clases "valid-feedback" e "invalid-feedback" que seran los msg a mostrar en caso de validacion correcta o incorrecta debajo de cada input (escribir directamente en el div)
+-Poner required en cada campo necesario, y su tipo correspondiente de input.
+
+//EJEMPLO JS: Para no enviar el formulario si no esta validado el formulario (en caso de no usar required)
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
