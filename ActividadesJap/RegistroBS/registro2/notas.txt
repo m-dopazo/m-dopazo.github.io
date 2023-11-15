@@ -63,6 +63,7 @@ al elemento FORM se le puede añadir las clases .needs-validation (todavia no se
 -Por defecto, los inputs tendran bordes rojos o verdes
 -Se puede añadir dentro de un div que contenga al input y label OTROs divs, de clases "valid-feedback" e "invalid-feedback" que seran los msg a mostrar en caso de validacion correcta o incorrecta debajo de cada input (escribir directamente en el div)
 -Poner required en cada campo necesario, y su tipo correspondiente de input.
+-Para hacer formulario custom (sin usar el estandar), se le añade atributo novalidate al form.
 
 //EJEMPLO JS: Para no enviar el formulario si no esta validado el formulario (en caso de no usar required)
 
