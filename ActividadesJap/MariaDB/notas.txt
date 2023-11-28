@@ -1,0 +1,50 @@
+HEIDI
+->Crear DB
+->Crear Tabla
+...
+
+
+//Para insertar datos:
+Consulta:
+    INSERT INTO tabla (PARAM1,..., PARAMX) VALUE (VAL1,... VALX);
+
+//Para mostrar Tabla:
+    SELECT columna1, columnaX FROM tabla;
+
+//Para elegir segun condicion (ej,ID)
+    SELECT columnas..  FROM tabla WHERE *condition* id=1;
+
+//Se comenta con #
+
+//Actualizar tabla:
+    UPDATE tabla SET param a cambiar (nombre="nuevo") WHERE condicion (id = 2)
+
+//Borrar
+    DELETE FROM tabla WHERE condition (id=1);
+
+//INTEGRAR MARIA DB A NODE
+
+//Descargar framework en Terminal
+npm install mariadb
+
+//Integrar al archivo node:
+const mariadb = require('mariadb');
+
+//Llamar a la BD
+const pool = mariasb.createPool(host:"localhost", user:"root", password:"", database:"pruebaNode")
+
+//"Receta en la pagina web"
+Se modifica el app. para que sea una func async: async (req,res)
+
+//GET
+const rows = await conn.query("CODIGO SQL");
+res.json(rows);
+
+//GET id
+const rows = await conn.query("CODIGO SQL .. id=?",[req.params.id]);
+res.json(rows[0]); //0 para no devolver un array
+
+//POST
+const response.... (" INSERT INTO tabla (PARAM1, PARAM2) VALUE (?, ?))"[req.body.param1, req.body.param2]
+
+res.json(id : parseInt(response.insertId), ...req.body)

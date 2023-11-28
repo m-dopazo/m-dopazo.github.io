@@ -14,7 +14,7 @@
 
   <div class="container">
     <main>
-      <form class="was-validated row mt-4" action="#" method="get" novalidate >
+      <form class="needs-validation row mt-4" action="#" method="get" novalidate >
         <div class="col">
           <h1 class="mb-3">Registro</h1>
           <hr class="my-4">
@@ -22,49 +22,40 @@
             <div class="col-sm-6">
               <label for="nombre" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="nombre"  required>
-              <div class="valid-feedback">Bien</div>
-              <div class="invalid-feedback">Mal</div>
+              <div class="invalid-feedback">Escriba su nombre</div>
             </div>
 
             <div class="col-sm-6">
               <label for="apellido" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="apellido" required>
-              <div class="valid-feedback">Bien</div>
-              <div class="invalid-feedback">Mal</div>
+              <div class="invalid-feedback">Escriba su apellido</div>
             </div>
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" required>
-              <div class="valid-feedback">Bien</div>
-              <div class="invalid-feedback">Mal</div>
+              <div class="invalid-feedback">Escriba su dirección de correo</div>
             </div>
 
             <div class="col-sm-6">
               <label for="password1" class="form-label">Contraseña</label>
               <input type="password" id="p1" class="form-control" id="password1" required>
-              <div class="valid-feedback">Bien</div>
-              <div class="invalid-feedback">Mal</div>
+              <div class="invalid-feedback">La contraseña debe tener (al menos) 8 caracteres</div>
             </div>
 
             <div class="col-sm-6">
               <label for="password2" class="form-label">Repetir contraseña</label>
               <input type="password" id="p2" class="form-control" id="password2" required>
-              <div class="valid-feedback">Bien</div>
-              <div class="invalid-feedback">Mal</div>
             </div>
 
             <div class="col-sm-12">
-              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
+              <button type="button" id="tyc" class="btn btn-link ps-0 form-control" data-bs-toggle="modal"
                 data-bs-target="#modalTerminos">Términos del servicio</button required>
-                <div class="valid-feedback">Bien</div>
-                <div class="invalid-feedback">Mal</div>
+              <div class="invalid-feedback">MAL</div>
+              
             </div>
 
-
             <button class="btn btn-primary" type="submit">Registrarme</button>
-
-
           </div>
         </div>
       </form>
@@ -92,9 +83,12 @@
             accusamus.</p>
         </div>
         <div class="modal-footer">
+          <form class="">
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="terminos">
+            <input type="checkbox" id="box" class="form-check-input" id="terminos">
             <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
+            <div class="invalid-feedback">Acepte los Terminos y Condiciones</div>
+          </form>
           </div>
         </div>
       </div>
