@@ -1,0 +1,11 @@
+//
+FILE SYSTEM NodeJs
+
+https://www.w3schools.com/nodejs/nodejs_filesystem.asp
+
+//
+Base de datos relacional:
+https://es.wikipedia.org/wiki/Base_de_datos_relacional
+
+Relacional:
+https://es.wikipedia.org/wiki/Modelo_relacional
