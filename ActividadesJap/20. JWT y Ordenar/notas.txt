@@ -1,0 +1,5 @@
+jwt.sign() => crea un token
+
+jwt.verify() => verifica
+
+verificar en un middleware con un token pasado por header en la peticion.
