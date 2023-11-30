@@ -43,7 +43,8 @@
                             <h6>Modificar registro</h6>
                             <input type="number" id="inputPutId" class="form-control"
                                 placeholder="ID del registro a modificar">
-                            <button id="btnPut" class="btn btn-warning position-absolute bottom-0 mb-3" disabled>
+                            <!-- Le damos target modal para que habra el modal definido mas abajo -->
+                            <button type="button "id="btnPut" class="btn btn-warning position-absolute bottom-0 mb-3" data-toggle="modal" data-target="#dataModal" disabled>
                                 Modificar</button>
                         </div>
                     </div>
@@ -70,7 +71,7 @@
     <div class="alert alert-danger fade" id="alert-error" role="alert">
         Algo salió mal...
     </div>
-    <div class="modal fade" tabindex="-1" id="dataModal">
+    <div class="modal" tabindex="-1" id="dataModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
